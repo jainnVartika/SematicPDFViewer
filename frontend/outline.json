@@ -1,0 +1,3521 @@
+{
+  "title": "AttentionIsAllYouNeed",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "AshishVaswaniNoamShazeerNikiParmarJakobUszkoreit",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "GoogleBrainGoogleBrainGoogleResearchGoogleResearch",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "avaswani@googlecomnoam@googlecomnikip@googlecomusz@googlecom",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "LlionJonesAidanNGomez\u0141ukaszKaiser",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "GoogleResearchUniversityofTorontoGoogleBrain",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "llion@googlecomaidan@cstorontoedulukaszkaiser@googlecom",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "IlliaPolosukhin",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "illiapolosukhin@gmailcom",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thedominantsequencetransductionmodelsarebasedoncomplexrecurrentor",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "convolutionalneuralnetworksthatincludeanencoderandadecoderThebest",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "performingmodelsalsoconnecttheencoderanddecoderthroughanattention",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "mechanismWeproposeanewsimplenetworkarchitecturetheTransformer",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "basedsolelyonattentionmechanismsdispensingwithrecurrenceandconvolutions",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "entirelyExperimentsontwomachinetranslationtasksshowthesemodelsto",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "besuperiorinqualitywhilebeingmoreparallelizableandrequiringsignificantly",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "lesstimetotrainOurmodelachieves284 BLEUontheWMT2014 English",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "toGermantranslationtaskimprovingovertheexistingbestresultsincluding",
+      "page": 1,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "ensemblesbyover2 BLEUOntheWMT2014 EnglishtoFrenchtranslationtask",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ourmodelestablishesanewsinglemodelstateoftheartBLEUscoreof418after",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "trainingfor35daysoneightGPUsasmallfractionofthetrainingcostsofthe",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "bestmodelsfromtheliteratureWeshowthattheTransformergeneralizeswellto",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "othertasksbyapplyingitsuccessfullytoEnglishconstituencyparsingbothwith",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "largeandlimitedtrainingdata",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "\u2217\u2217\u2217\u2217",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "\u2217\u2217\u2020\u2217",
+      "page": 1,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Abstract",
+      "page": 1,
+      "section_type": "abstract"
+    },
+    {
+      "level": "H3",
+      "text": "implementingtensor2tensorreplacingourearliercodebasegreatlyimprovingresultsandmassivelyaccelerating",
+      "page": 1,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "Recurrentneuralnetworkslongshorttermmemory[13]andgatedrecurrent[7]neuralnetworks",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "inparticularhavebeenfirmlyestablishedasstateoftheartapproachesinsequencemodelingand",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "transductionproblemssuchaslanguagemodelingandmachinetranslation[3525]Numerous",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "effortshavesincecontinuedtopushtheboundariesofrecurrentlanguagemodelsandencoderdecoder",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "architectures[382415]",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Recurrentmodelstypicallyfactorcomputationalongthesymbolpositionsoftheinputandoutput",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sequencesAligningthepositionstostepsincomputationtimetheygenerateasequenceofhidden",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "statesasafunctionoftheprevioushiddenstateandtheinputforpositionThisinherently",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "hht",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sequentialnatureprecludesparallelizationwithintrainingexampleswhichbecomescriticalatlonger",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sequencelengthsasmemoryconstraintslimitbatchingacrossexamplesRecentworkhasachieved",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "significantimprovementsincomputationalefficiencythroughfactorizationtricks[21]andconditional",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "computation[32]whilealsoimprovingmodelperformanceincaseofthelatterThefundamental",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "constraintofsequentialcomputationhoweverremains",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Attentionmechanismshavebecomeanintegralpartofcompellingsequencemodelingandtransduc",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tionmodelsinvarioustasksallowingmodelingofdependencieswithoutregardtotheirdistancein",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "theinputoroutputsequences[219]Inallbutafewcases[27]howeversuchattentionmechanisms",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "areusedinconjunctionwitharecurrentnetwork",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "InthisworkweproposetheTransformeramodelarchitectureeschewingrecurrenceandinstead",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "relyingentirelyonanattentionmechanismtodrawglobaldependenciesbetweeninputandoutput",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "TheTransformerallowsforsignificantlymoreparallelizationandcanreachanewstateoftheartin",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "translationqualityafterbeingtrainedforaslittleastwelvehoursoneightP100 GPUs",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ThegoalofreducingsequentialcomputationalsoformsthefoundationoftheExtendedNeuralGPU",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[16]ByteNet[18]andConvS2 S[9]allofwhichuseconvolutionalneuralnetworksasbasicbuilding",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "blockcomputinghiddenrepresentationsinparallelforallinputandoutputpositionsInthesemodels",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thenumberofoperationsrequiredtorelatesignalsfromtwoarbitraryinputoroutputpositionsgrows",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "inthedistancebetweenpositionslinearlyforConvS2 SandlogarithmicallyforByteNetThismakes",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "itmoredifficulttolearndependenciesbetweendistantpositions[12]IntheTransformerthisis",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "reducedtoaconstantnumberofoperationsalbeitatthecostofreducedeffectiveresolutiondue",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "toaveragingattentionweightedpositionsaneffectwecounteractwithMultiHeadAttentionas",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "describedinsection32",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Selfattentionsometimescalledintraattentionisanattentionmechanismrelatingdifferentpositions",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofasinglesequenceinordertocomputearepresentationofthesequenceSelfattentionhasbeen",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "usedsuccessfullyinavarietyoftasksincludingreadingcomprehensionabstractivesummarization",
+      "page": 2,
+      "section_type": "abstract"
+    },
+    {
+      "level": "H1",
+      "text": "textualentailmentandlearningtaskindependentsentencerepresentations[4272822]",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Endtoendmemorynetworksarebasedonarecurrentattentionmechanisminsteadofsequence",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "alignedrecurrenceandhavebeenshowntoperformwellonsimplelanguagequestionansweringand",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "languagemodelingtasks[34]",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "TothebestofourknowledgehowevertheTransformeristhefirsttransductionmodelrelying",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "entirelyonselfattentiontocomputerepresentationsofitsinputandoutputwithoutusingsequence",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "alignedRNNsorconvolutionInthefollowingsectionswewilldescribetheTransformermotivate",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "selfattentionanddiscussitsadvantagesovermodelssuchas[1718]and[9]",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Mostcompetitiveneuralsequencetransductionmodelshaveanencoderdecoderstructure[5235]",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Heretheencodermapsaninputsequenceofsymbolrepresentations(xx)toasequence",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofcontinuousrepresentationsz=(zz)Givenzthedecoderthengeneratesanoutput",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sequence(yy)ofsymbolsoneelementatatimeAteachstepthemodelisautoregressive",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[10]consumingthepreviouslygeneratedsymbolsasadditionalinputwhengeneratingthenext",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "tt\u22121",
+      "page": 2,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "1 Introduction",
+      "page": 2,
+      "section_type": "introduction"
+    },
+    {
+      "level": "H1",
+      "text": "Figure1:TheTransformermodelarchitecture",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "TheTransformerfollowsthisoverallarchitectureusingstackedselfattentionandpointwisefully",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "connectedlayersforboththeencoderanddecodershownintheleftandrighthalvesofFigure1",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "respectively",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "31 EncoderandDecoderStacks",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Encoder:TheencoderiscomposedofastackofN=6identicallayersEachlayerhastwo",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sublayersThefirstisamultiheadselfattentionmechanismandthesecondisasimpleposition",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "wisefullyconnectedfeedforwardnetworkWeemployaresidualconnection[11]aroundeachof",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thetwosublayersfollowedbylayernormalization[1]Thatistheoutputofeachsublayeris",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "LayerNorm(x+Sublayer(x))whereSublayer(x)isthefunctionimplementedbythesublayer",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "itselfTofacilitatetheseresidualconnectionsallsublayersinthemodelaswellastheembedding",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "layersproduceoutputsofdimensiond=512",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Decoder:ThedecoderisalsocomposedofastackofN=6identicallayersInadditiontothetwo",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sublayersineachencoderlayerthedecoderinsertsathirdsublayerwhichperformsmultihead",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "attentionovertheoutputoftheencoderstackSimilartotheencoderweemployresidualconnections",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "aroundeachofthesublayersfollowedbylayernormalizationWealsomodifytheselfattention",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sublayerinthedecoderstacktopreventpositionsfromattendingtosubsequentpositionsThis",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "maskingcombinedwithfactthattheoutputembeddingsareoffsetbyonepositionensuresthatthe",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "predictionsforpositionicandependonlyontheknownoutputsatpositionslessthani",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "32 Attention",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Anattentionfunctioncanbedescribedasmappingaqueryandasetofkeyvaluepairstoanoutput",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "wherethequerykeysvaluesandoutputareallvectorsTheoutputiscomputedasaweightedsum",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 3,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ScaledDotProductAttentionMultiHeadAttention",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Figure2:(left)ScaledDotProductAttention(right)MultiHeadAttentionconsistsofseveral",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "attentionlayersrunninginparallel",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofthevalueswheretheweightassignedtoeachvalueiscomputedbyacompatibilityfunctionofthe",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "querywiththecorrespondingkey",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "321 ScaledDotProductAttention",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Wecallourparticularattention\"ScaledDotProductAttention\"(Figure2)Theinputconsistsof",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "queriesandkeysofdimensiondandvaluesofdimensiondWecomputethedotproductsofthe",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "querywithallkeysdivideeachbydandapplyasoftmaxfunctiontoobtaintheweightsonthe",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "values",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inpracticewecomputetheattentionfunctiononasetofqueriessimultaneouslypackedtogether",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "intoamatrixThekeysandvaluesarealsopackedtogetherintomatricesandWecompute",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "QKV",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thematrixofoutputsas:",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Attention(QKV)=softmax()V(1)",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thetwomostcommonlyusedattentionfunctionsareadditiveattention[2]anddotproduct(multi",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "plicative)attentionDotproductattentionisidenticaltoouralgorithmexceptforthescalingfactor",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofAdditiveattentioncomputesthecompatibilityfunctionusingafeedforwardnetworkwith",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "asinglehiddenlayerWhilethetwoaresimilarintheoreticalcomplexitydotproductattentionis",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "muchfasterandmorespaceefficientinpracticesinceitcanbeimplementedusinghighlyoptimized",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "matrixmultiplicationcode",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Whileforsmallvaluesofdthetwomechanismsperformsimilarlyadditiveattentionoutperforms",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "dotproductattentionwithoutscalingforlargervaluesofd[3]Wesuspectthatforlargevaluesof",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "dthedotproductsgrowlargeinmagnitudepushingthesoftmaxfunctionintoregionswhereithas",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "extremelysmallgradientsTocounteractthiseffectwescalethedotproductsby",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "322 MultiHeadAttention",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Insteadofperformingasingleattentionfunctionwithddimensionalkeysvaluesandqueries",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "wefounditbeneficialtolinearlyprojectthequerieskeysandvalueshtimeswithdifferentlearned",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "linearprojectionstoddandddimensionsrespectivelyOneachoftheseprojectedversionsof",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "querieskeysandvalueswethenperformtheattentionfunctioninparallelyieldingddimensional",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "kkv",
+      "page": 4,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "outputvaluesTheseareconcatenatedandonceagainprojectedresultinginthefinalvaluesas",
+      "page": 5,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "depictedinFigure2",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Multiheadattentionallowsthemodeltojointlyattendtoinformationfromdifferentrepresentation",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "subspacesatdifferentpositionsWithasingleattentionheadaveraginginhibitsthis",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "MultiHead(QKV)=Concat(headhead)W",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "wherehead=Attention(QWKWVW)",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "WheretheprojectionsareparametermatricesW\u2208W\u2208W\u2208",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "RRR",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andW\u2208",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inthisworkweemployh=8parallelattentionlayersorheadsForeachoftheseweuse",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "d=d=d/h=64 Duetothereduceddimensionofeachheadthetotalcomputationalcost",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "issimilartothatofsingleheadattentionwithfulldimensionality",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "323 ApplicationsofAttentioninourModel",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "TheTransformerusesmultiheadattentioninthreedifferentways:",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "\u2022In\"encoderdecoderattention\"layersthequeriescomefromthepreviousdecoderlayer",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andthememorykeysandvaluescomefromtheoutputoftheencoderThisallowsevery",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "positioninthedecodertoattendoverallpositionsintheinputsequenceThismimicsthe",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "typicalencoderdecoderattentionmechanismsinsequencetosequencemodelssuchas",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[3829]",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "\u2022TheencodercontainsselfattentionlayersInaselfattentionlayerallofthekeysvalues",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andqueriescomefromthesameplaceinthiscasetheoutputofthepreviouslayerinthe",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "encoderEachpositionintheencodercanattendtoallpositionsinthepreviouslayerofthe",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "encoder",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "\u2022Similarlyselfattentionlayersinthedecoderalloweachpositioninthedecodertoattendto",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "allpositionsinthedecoderuptoandincludingthatpositionWeneedtopreventleftward",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "informationflowinthedecodertopreservetheautoregressivepropertyWeimplementthis",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "insideofscaleddotproductattentionbymaskingout(settingto\u2212\u221e)allvaluesintheinput",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofthesoftmaxwhichcorrespondtoillegalconnectionsSeeFigure2",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "33 PositionwiseFeedForwardNetworks",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inadditiontoattentionsublayerseachofthelayersinourencoderanddecodercontainsafully",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "connectedfeedforwardnetworkwhichisappliedtoeachpositionseparatelyandidenticallyThis",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "consistsoftwolineartransformationswithaReLUactivationinbetween",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "FFN(x)=max(0xW+b)W+b(2)",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Whilethelineartransformationsarethesameacrossdifferentpositionstheyusedifferentparameters",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "fromlayertolayerAnotherwayofdescribingthisisastwoconvolutionswithkernelsize1",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thedimensionalityofinputandoutputisd=512andtheinnerlayerhasdimensionality",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "d=2048",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "34 EmbeddingsandSoftmax",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Similarlytoothersequencetransductionmodelsweuselearnedembeddingstoconverttheinput",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tokensandoutputtokenstovectorsofdimensiondWealsousetheusuallearnedlineartransfor",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "mationandsoftmaxfunctiontoconvertthedecoderoutputtopredictednexttokenprobabilitiesIn",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ourmodelwesharethesameweightmatrixbetweenthetwoembeddinglayersandthepresoftmax",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "lineartransformationsimilarto[30]Intheembeddinglayerswemultiplythoseweightsbyd",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "QKV",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "iii",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "iii",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "d\u00d7dKd\u00d7dVd\u00d7d",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "Ohd\u00d7d",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "kvmodel",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1122",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 5,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Table1:Maximumpathlengthsperlayercomplexityandminimumnumberofsequentialoperations",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "fordifferentlayertypesnisthesequencelengthdistherepresentationdimensionkisthekernel",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sizeofconvolutionsandrthesizeoftheneighborhoodinrestrictedselfattention",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "LayerTypeComplexityperLayerSequentialMaximumPathLength",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Operations",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "SelfAttentionO(n\u00b7d)O(1)O(1)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "RecurrentO(n\u00b7d)O(n)O(n)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Convolutional",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "O(k\u00b7n\u00b7d)O(1)O(log(n))",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "SelfAttention(restricted)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "O(r\u00b7n\u00b7d)O(1)O(n/r)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "35 PositionalEncoding",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Sinceourmodelcontainsnorecurrenceandnoconvolutioninorderforthemodeltomakeuseofthe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "orderofthesequencewemustinjectsomeinformationabouttherelativeorabsolutepositionofthe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tokensinthesequenceTothisendweadd\"positionalencodings\"totheinputembeddingsatthe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "bottomsoftheencoderanddecoderstacksThepositionalencodingshavethesamedimensiond",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "astheembeddingssothatthetwocanbesummedTherearemanychoicesofpositionalencodings",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "learnedandfixed[9]",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inthisworkweusesineandcosinefunctionsofdifferentfrequencies:",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "PE=sin(pos/10000)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "PE=cos(pos/10000)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "whereposisthepositionandiisthedimensionThatiseachdimensionofthepositionalencoding",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "correspondstoasinusoidThewavelengthsformageometricprogressionfrom2\u03c0to10000\u00b72\u03c0We",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "chosethisfunctionbecausewehypothesizeditwouldallowthemodeltoeasilylearntoattendby",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "relativepositionssinceforanyfixedoffsetkPEcanberepresentedasalinearfunctionof",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Wealsoexperimentedwithusinglearnedpositionalembeddings[9]insteadandfoundthatthetwo",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "versionsproducednearlyidenticalresults(seeTable3row(E))Wechosethesinusoidalversion",
+      "page": 6,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "becauseitmayallowthemodeltoextrapolatetosequencelengthslongerthantheonesencountered",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "duringtraining",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inthissectionwecomparevariousaspectsofselfattentionlayerstotherecurrentandconvolu",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tionallayerscommonlyusedformappingonevariablelengthsequenceofsymbolrepresentations",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(xx)toanothersequenceofequallength(zz)withxz\u2208suchasahidden",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "layerinatypicalsequencetransductionencoderordecoderMotivatingouruseofselfattentionwe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "considerthreedesiderata",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "OneisthetotalcomputationalcomplexityperlayerAnotheristheamountofcomputationthatcan",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "beparallelizedasmeasuredbytheminimumnumberofsequentialoperationsrequired",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ThethirdisthepathlengthbetweenlongrangedependenciesinthenetworkLearninglongrange",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "dependenciesisakeychallengeinmanysequencetransductiontasksOnekeyfactoraffectingthe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "abilitytolearnsuchdependenciesisthelengthofthepathsforwardandbackwardsignalshaveto",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "traverseinthenetworkTheshorterthesepathsbetweenanycombinationofpositionsintheinput",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andoutputsequencestheeasieritistolearnlongrangedependencies[12]Hencewealsocompare",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "themaximumpathlengthbetweenanytwoinputandoutputpositionsinnetworkscomposedofthe",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "differentlayertypes",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AsnotedinTable1aselfattentionlayerconnectsallpositionswithaconstantnumberofsequentially",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "executedoperationswhereasarecurrentlayerrequiresO(n)sequentialoperationsIntermsof",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "computationalcomplexityselfattentionlayersarefasterthanrecurrentlayerswhenthesequence",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "(pos2i)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "2i/d",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "(pos2i+1)",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "2i/d",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "pos+k",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "pos",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1n1nii",
+      "page": 6,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "lengthnissmallerthantherepresentationdimensionalitydwhichismostoftenthecasewith",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sentencerepresentationsusedbystateoftheartmodelsinmachinetranslationssuchaswordpiece",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[38]andbytepair[31]representationsToimprovecomputationalperformancefortasksinvolving",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "verylongsequencesselfattentioncouldberestrictedtoconsideringonlyaneighborhoodofsizerin",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "theinputsequencecenteredaroundtherespectiveoutputpositionThiswouldincreasethemaximum",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "pathlengthtoWeplantoinvestigatethisapproachfurtherinfuturework",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "O(n/r)",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Asingleconvolutionallayerwithkernelwidthk<ndoesnotconnectallpairsofinputandoutput",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "positionsDoingsorequiresastackofO(n/k)convolutionallayersinthecaseofcontiguouskernels",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "orO(log(n))inthecaseofdilatedconvolutions[18]increasingthelengthofthelongestpaths",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "betweenanytwopositionsinthenetworkConvolutionallayersaregenerallymoreexpensivethan",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "recurrentlayersbyafactorofkSeparableconvolutions[6]howeverdecreasethecomplexity",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "considerablytoEvenwithhoweverthecomplexityofaseparable",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "O(k\u00b7n\u00b7d+n\u00b7d)k=n",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "convolutionisequaltothecombinationofaselfattentionlayerandapointwisefeedforwardlayer",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "theapproachwetakeinourmodel",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AssidebenefitselfattentioncouldyieldmoreinterpretablemodelsWeinspectattentiondistributions",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "fromourmodelsandpresentanddiscussexamplesintheappendixNotonlydoindividualattention",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "headsclearlylearntoperformdifferenttasksmanyappeartoexhibitbehaviorrelatedtothesyntactic",
+      "page": 7,
+      "section_type": "related work"
+    },
+    {
+      "level": "H1",
+      "text": "andsemanticstructureofthesentences",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thissectiondescribesthetrainingregimeforourmodels",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "51 TrainingDataandBatching",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "WetrainedonthestandardWMT2014 EnglishGermandatasetconsistingofabout45million",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sentencepairsSentenceswereencodedusingbytepairencoding[3]whichhasasharedsource",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "targetvocabularyofabout37000tokensForEnglishFrenchweusedthesignificantlylargerWMT",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2014 EnglishFrenchdatasetconsistingof36 Msentencesandsplittokensintoa32000wordpiece",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "vocabulary[38]SentencepairswerebatchedtogetherbyapproximatesequencelengthEachtraining",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "batchcontainedasetofsentencepairscontainingapproximately25000sourcetokensand25000",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "targettokens",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "52 HardwareandSchedule",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Wetrainedourmodelsononemachinewith8 NVIDIAP100 GPUsForourbasemodelsusing",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thehyperparametersdescribedthroughoutthepapereachtrainingsteptookabout04secondsWe",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "trainedthebasemodelsforatotalof100000stepsor12hoursForourbigmodels(describedonthe",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "bottomlineoftable3)steptimewas10secondsThebigmodelsweretrainedfor300000steps",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(35days)",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "53 Optimizer",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "WeusedtheAdamoptimizer[20]with\u03b2=09\u03b2=098and\u03f5=10 Wevariedthelearning",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "rateoverthecourseoftrainingaccordingtotheformula:",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "lrate=d\u00b7min(step_numstep_num\u00b7warmup_steps)(3)",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thiscorrespondstoincreasingthelearningratelinearlyforthefirst_trainingsteps",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "warmupsteps",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "anddecreasingitthereafterproportionallytotheinversesquarerootofthestepnumberWeused",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "warmupsteps=4000",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "54 Regularization",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Weemploythreetypesofregularizationduringtraining:",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "\u221205\u221205\u221215",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 7,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Table2:TheTransformerachievesbetterBLEUscoresthanpreviousstateoftheartmodelsonthe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "EnglishtoGermanandEnglishtoFrenchnewstest2014testsatafractionofthetrainingcost",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Model",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "BLEUTrainingCost(FLOPs)",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ENDEENFRENDEENFR",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ByteNet[18]2375",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "DeepAtt+PosUnk[39]39210\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "GNMT+RL[38]2463992",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "23\u00b71014\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ConvS2 S[9]2516404696\u00b71015\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "MoE[32]2603405620\u00b71012\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "DeepAtt+PosUnkEnsemble[39]40480\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "GNMT+RLEnsemble[38]2630411618\u00b71011\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ConvS2 SEnsemble[9]2636412977\u00b71012\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Transformer(basemodel)27338133\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Transformer(big)28441823\u00b710",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ResidualDropoutWeapplydropout[33]totheoutputofeachsublayerbeforeitisaddedtothe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sublayerinputandnormalizedInadditionweapplydropouttothesumsoftheembeddingsandthe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "positionalencodingsinboththeencoderanddecoderstacksForthebasemodelweusearateof",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "P=01",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "LabelSmoothingDuringtrainingweemployedlabelsmoothingofvalue\u03f5=01[36]This",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "hurtsperplexityasthemodellearnstobemoreunsurebutimprovesaccuracyandBLEUscore",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "61 MachineTranslation",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "OntheWMT2014 EnglishtoGermantranslationtaskthebigtransformermodel(Transformer(big)",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "inTable2)outperformsthebestpreviouslyreportedmodels(includingensembles)bymorethan20",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "BLEUestablishinganewstateoftheartBLEUscoreof284 Theconfigurationofthismodelis",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "listedinthebottomlineofTable3 TrainingtookdaysonP100 GPUsEvenourbasemodel",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "358",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "surpassesallpreviouslypublishedmodelsandensemblesatafractionofthetrainingcostofanyof",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thecompetitivemodels",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "OntheWMT2014 EnglishtoFrenchtranslationtaskourbigmodelachievesaBLEUscoreof410",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "outperformingallofthepreviouslypublishedsinglemodelsatlessthan1/4thetrainingcostofthe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "previousstateoftheartmodelTheTransformer(big)modeltrainedforEnglishtoFrenchused",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "dropoutrateinsteadof",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "P=0103",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Forthebasemodelsweusedasinglemodelobtainedbyaveragingthelast5checkpointswhich",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "werewrittenat10minuteintervalsForthebigmodelsweaveragedthelast20checkpointsWe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "usedbeamsearchwithabeamsizeof4andlengthpenalty\u03b1=06[38]Thesehyperparameters",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "werechosenafterexperimentationonthedevelopmentsetWesetthemaximumoutputlengthduring",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "inferencetoinputlength+butterminateearlywhenpossible[38]",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Table2summarizesourresultsandcomparesourtranslationqualityandtrainingcoststoothermodel",
+      "page": 8,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "architecturesfromtheliteratureWeestimatethenumberoffloatingpointoperationsusedtotraina",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "modelbymultiplyingthetrainingtimethenumberofGPUsusedandanestimateofthesustained",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "singleprecisionfloatingpointcapacityofeachGPU",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "62 ModelVariations",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ToevaluatetheimportanceofdifferentcomponentsoftheTransformerwevariedourbasemodel",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "indifferentwaysmeasuringthechangeinperformanceonEnglishtoGermantranslationonthe",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1920",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1820",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1920",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "2021",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "1921",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "drop",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "drop",
+      "page": 8,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "6 Results",
+      "page": 8,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "Table3:VariationsontheTransformerarchitectureUnlistedvaluesareidenticaltothoseofthebase",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "modelAllmetricsareontheEnglishtoGermantranslationdevelopmentsetnewstest2013 Listed",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "perplexitiesareperwordpieceaccordingtoourbytepairencodingandshouldnotbecomparedto",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "perwordperplexities",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "NddhddP\u03f5",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "trainPPLBLEUparams",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "steps(dev)(dev)",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "\u00d710",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "base65122048864640101100 K49225865",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(A)",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "1512512529249",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "4128128500255",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "163232491258",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "321616501254",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(B)",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "1651625158",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "3250125460",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(C)256323257524528",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "261123736",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "451925350",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "848825580",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "1024128128466260168",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "102451225453",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "409647526290",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(D)",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "00577246",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "02495255",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "00467253",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "02547257",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(E)positionalembeddinginsteadofsinusoids492257",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "big6102440961603300 K433264213",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "developmentsetnewstest2013 Weusedbeamsearchasdescribedintheprevioussectionbutno",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "checkpointaveragingWepresenttheseresultsinTable3",
+      "page": 9,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "InTable3rows(A)wevarythenumberofattentionheadsandtheattentionkeyandvaluedimensions",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "keepingtheamountofcomputationconstantasdescribedinSection322 Whilesinglehead",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "attentionis09 BLEUworsethanthebestsettingqualityalsodropsoffwithtoomanyheads",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "InTable3rows(B)weobservethatreducingtheattentionkeysizedhurtsmodelqualityThis",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "suggeststhatdeterminingcompatibilityisnoteasyandthatamoresophisticatedcompatibility",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "functionthandotproductmaybebeneficialWefurtherobserveinrows(C)and(D)thatasexpected",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "biggermodelsarebetteranddropoutisveryhelpfulinavoidingoverfittingInrow(E)wereplaceour",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sinusoidalpositionalencodingwithlearnedpositionalembeddings[9]andobservenearlyidentical",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "resultstothebasemodel",
+      "page": 9,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "63 EnglishConstituencyParsing",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ToevaluateiftheTransformercangeneralizetoothertasksweperformedexperimentsonEnglish",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "constituencyparsingThistaskpresentsspecificchallenges:theoutputissubjecttostrongstructural",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "constraintsandissignificantlylongerthantheinputFurthermoreRNNsequencetosequence",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "modelshavenotbeenabletoattainstateoftheartresultsinsmalldataregimes[37]",
+      "page": 9,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "Wetraineda4layertransformerwithd=1024ontheWallStreetJournal(WSJ)portionofthe",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "PennTreebank[25]about40 KtrainingsentencesWealsotraineditinasemisupervisedsetting",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "usingthelargerhighconfidenceandBerkleyParsercorporafromwithapproximately17 Msentences",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[37]Weusedavocabularyof16 KtokensfortheWSJonlysettingandavocabularyof32 Ktokens",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "forthesemisupervisedsetting",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Weperformedonlyasmallnumberofexperimentstoselectthedropoutbothattentionandresidual",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "(section54)learningratesandbeamsizeontheSection22developmentsetallotherparameters",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "remainedunchangedfromtheEnglishtoGermanbasetranslationmodelDuringinferencewe",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "modelff6",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "kvdropls",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H2",
+      "text": "model",
+      "page": 9,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Table4:TheTransformergeneralizeswelltoEnglishconstituencyparsing(ResultsareonSection23",
+      "page": 10,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "ofWSJ)",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ParserTrainingWSJ23 F1",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Vinyals&Kaiserelal(2014)[37]WSJonlydiscriminative883",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Petrovetal(2006)[29]WSJonlydiscriminative904",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Zhuetal(2013)[40]WSJonlydiscriminative904",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Dyeretal(2016)[8]WSJonlydiscriminative917",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Transformer(4layers)WSJonlydiscriminative913",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Zhuetal(2013)[40]semisupervised913",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Huang&Harper(2009)[14]semisupervised913",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "McCloskyetal(2006)[26]semisupervised921",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Vinyals&Kaiserelal(2014)[37]semisupervised921",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Transformer(4layers)semisupervised927",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Luongetal(2015)[23]multitask930",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Dyeretal(2016)[8]generative933",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "increasedthemaximumoutputlengthtoinputlength+300 Weusedabeamsizeof21and\u03b1=03",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "forbothWSJonlyandthesemisupervisedsetting",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "OurresultsinTable4showthatdespitethelackoftaskspecifictuningourmodelperformssur",
+      "page": 10,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "prisinglywellyieldingbetterresultsthanallpreviouslyreportedmodelswiththeexceptionofthe",
+      "page": 10,
+      "section_type": "results"
+    },
+    {
+      "level": "H1",
+      "text": "RecurrentNeuralNetworkGrammar[8]",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "IncontrasttoRNNsequencetosequencemodels[37]theTransformeroutperformstheBerkeley",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Parser[29]evenwhentrainingonlyontheWSJtrainingsetof40 Ksentences",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "InthisworkwepresentedtheTransformerthefirstsequencetransductionmodelbasedentirelyon",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "attentionreplacingtherecurrentlayersmostcommonlyusedinencoderdecoderarchitectureswith",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "multiheadedselfattention",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "FortranslationtaskstheTransformercanbetrainedsignificantlyfasterthanarchitecturesbased",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "onrecurrentorconvolutionallayersOnbothWMT2014 EnglishtoGermanandWMT2014",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "EnglishtoFrenchtranslationtasksweachieveanewstateoftheartIntheformertaskourbest",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "modeloutperformsevenallpreviouslyreportedensembles",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "WeareexcitedaboutthefutureofattentionbasedmodelsandplantoapplythemtoothertasksWe",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "plantoextendtheTransformertoproblemsinvolvinginputandoutputmodalitiesotherthantextand",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "toinvestigatelocalrestrictedattentionmechanismstoefficientlyhandlelargeinputsandoutputs",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "suchasimagesaudioandvideoMakinggenerationlesssequentialisanotherresearchgoalsofours",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Thecodeweusedtotrainandevaluateourmodelsisavailableathttps://githubcom/",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tensorflow/tensor2tensor",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AcknowledgementsWearegratefultoNalKalchbrennerandStephanGouwsfortheirfruitful",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "commentscorrectionsandinspiration",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[1]JimmyLeiBaJamieRyanKirosandGeoffreyEHintonLayernormalizationarXivpreprint",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXiv:1607064502016",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[2]DzmitryBahdanauKyunghyunChoandYoshuaBengioNeuralmachinetranslationbyjointly",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "learningtoalignandtranslateabs/140904732014",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "CoRR",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[3]DennyBritzAnnaGoldieMinhThangLuongandQuocVLeMassiveexplorationofneural",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "machinetranslationarchitecturesCoRRabs/1703039062017",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[4]JianpengChengLiDongandMirellaLapataLongshorttermmemorynetworksformachine",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "readingarXivpreprintarXiv:1601067332016",
+      "page": 10,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "7 Conclusion",
+      "page": 10,
+      "section_type": "conclusion"
+    },
+    {
+      "level": "H3",
+      "text": "References",
+      "page": 10,
+      "section_type": "references"
+    },
+    {
+      "level": "H1",
+      "text": "[5]KyunghyunChoBartvanMerrienboerCaglarGulcehreFethiBougaresHolgerSchwenk",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andYoshuaBengioLearningphraserepresentationsusingrnnencoderdecoderforstatistical",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "machinetranslationCoRRabs/140610782014",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[6]FrancoisCholletXception:DeeplearningwithdepthwiseseparableconvolutionsarXiv",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "preprintarXiv:161002357",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[7]JunyoungChung\u00c7aglarG\u00fcl\u00e7ehreKyunghyunChoandYoshuaBengioEmpiricalevaluation",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ofgatedrecurrentneuralnetworksonsequencemodelingCoRRabs/141235552014",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[8]ChrisDyerAdhigunaKuncoroMiguelBallesterosandNoahASmithRecurrentneural",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "networkgrammarsInProcofNAACL2016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[9]JonasGehringMichaelAuliDavidGrangierDenisYaratsandYannNDauphinConvolu",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "tionalsequencetosequencelearningarXivpreprintarXiv:170503122v22017",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[10]AlexGravesGeneratingsequenceswithrecurrentneuralnetworks",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXivpreprint",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXiv:13080850",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2013",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[11]KaimingHeXiangyuZhangShaoqingRenandJianSunDeepresiduallearningforim",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "agerecognitionInProceedingsoftheIEEEConferenceonComputerVisionandPattern",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Recognitionpages770\u20137782016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[12]SeppHochreiterYoshuaBengioPaoloFrasconiandJ\u00fcrgenSchmidhuberGradientflowin",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "recurrentnets:thedifficultyoflearninglongtermdependencies2001",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[13]SeppHochreiterandJ\u00fcrgenSchmidhuberLongshorttermmemory",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Neuralcomputation",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "9(8):1735\u201317801997",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[14]ZhongqiangHuangandMaryHarperSelftrainingPCFGgrammarswithlatentannotations",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "acrosslanguagesInProceedingsofthe2009 ConferenceonEmpiricalMethodsinNatural",
+      "page": 11,
+      "section_type": "method"
+    },
+    {
+      "level": "H1",
+      "text": "LanguageProcessingpages832\u2013841 ACLAugust2009",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[15]RafalJozefowiczOriolVinyalsMikeSchusterNoamShazeerandYonghuiWuExploring",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "thelimitsoflanguagemodelingarXivpreprintarXiv:1602024102016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[16]\u0141ukaszKaiserandSamyBengioCanactivememoryreplaceattention?In",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AdvancesinNeural",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "InformationProcessingSystems(NIPS)",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[17]\u0141ukaszKaiserandIlyaSutskeverNeuralGPUslearnalgorithmsInInternationalConference",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "onLearningRepresentations(ICLR)2016",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[18]NalKalchbrennerLasseEspeholtKarenSimonyanAaronvandenOordAlexGravesandKo",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "rayKavukcuogluNeuralmachinetranslationinlineartimearXivpreprintarXiv:161010099v2",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2017",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[19]YoonKimCarlDentonLuongHoangandAlexanderMRushStructuredattentionnetworks",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "In2017",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "InternationalConferenceonLearningRepresentations",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[20]DiederikKingmaandJimmyBaAdam:AmethodforstochasticoptimizationInICLR2015",
+      "page": 11,
+      "section_type": "method"
+    },
+    {
+      "level": "H1",
+      "text": "[21]OleksiiKuchaievandBorisGinsburgFactorizationtricksforLSTMnetworksarXivpreprint",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXiv:1703107222017",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[22]ZhouhanLinMinweiFengCiceroNogueiradosSantosMoYuBingXiangBowen",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ZhouandYoshuaBengioAstructuredselfattentivesentenceembeddingarXivpreprint",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXiv:1703031302017",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[23]MinhThangLuongQuocVLeIlyaSutskeverOriolVinyalsandLukaszKaiserMultitask",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "sequencetosequencelearningarXivpreprintarXiv:1511061142015",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[24]MinhThangLuongHieuPhamandChristopherDManningEffectiveapproachestoattention",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "basedneuralmachinetranslationarXivpreprintarXiv:1508040252015",
+      "page": 11,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[25]MitchellPMarcusMaryAnnMarcinkiewiczandBeatriceSantoriniBuildingalargeannotated",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "corpusofenglish:ThepenntreebankComputationallinguistics19(2):313\u20133301993",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[26]DavidMcCloskyEugeneCharniakandMarkJohnsonEffectiveselftrainingforparsingIn",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ProceedingsoftheHumanLanguageTechnologyConferenceoftheNAACLMainConference",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "pages152\u2013159 ACLJune2006",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[27]AnkurParikhOscarT\u00e4ckstr\u00f6mDipanjanDasandJakobUszkoreitAdecomposableattention",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "modelInEmpiricalMethodsinNaturalLanguageProcessing2016",
+      "page": 12,
+      "section_type": "method"
+    },
+    {
+      "level": "H1",
+      "text": "[28]RomainPaulusCaimingXiongandRichardSocherAdeepreinforcedmodelforabstractive",
+      "page": 12,
+      "section_type": "abstract"
+    },
+    {
+      "level": "H1",
+      "text": "summarizationarXivpreprintarXiv:1705043042017",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[29]SlavPetrovLeonBarrettRomainThibauxandDanKleinLearningaccuratecompact",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andinterpretabletreeannotationIn",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Proceedingsofthe21stInternationalConferenceon",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "ComputationalLinguisticsand44thAnnualMeetingoftheACLpages433\u2013440 ACLJuly",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "2006",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[30]OfirPressandLiorWolfUsingtheoutputembeddingtoimprovelanguagemodelsarXiv",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "preprintarXiv:1608058592016",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[31]RicoSennrichBarryHaddowandAlexandraBirchNeuralmachinetranslationofrarewords",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "withsubwordunitsarXivpreprintarXiv:1508079092015",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[32]NoamShazeerAzaliaMirhoseiniKrzysztofMaziarzAndyDavisQuocLeGeoffreyHinton",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "andJeffDeanOutrageouslylargeneuralnetworks:Thesparselygatedmixtureofexperts",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "layerarXivpreprintarXiv:1701065382017",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[33]NitishSrivastavaGeoffreyEHintonAlexKrizhevskyIlyaSutskeverandRuslanSalakhutdi",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "novDropout:asimplewaytopreventneuralnetworksfromoverfittingJournalofMachine",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "LearningResearch15(1):1929\u201319582014",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[34]SainbayarSukhbaatarArthurSzlamJasonWestonandRobFergusEndtoendmemory",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "networksInCCortesNDLawrenceDDLeeMSugiyamaandRGarnetteditors",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AdvancesinNeuralInformationProcessingSystems28pages2440\u20132448 CurranAssociates",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Inc2015",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[35]IlyaSutskeverOriolVinyalsandQuocVVLeSequencetosequencelearningwithneural",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "networksInAdvancesinNeuralInformationProcessingSystemspages3104\u201331122014",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[36]ChristianSzegedyVincentVanhouckeSergeyIoffeJonathonShlensandZbigniewWojna",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "RethinkingtheinceptionarchitectureforcomputervisionCoRRabs/1512005672015",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[37]Vinyals&KaiserKooPetrovSutskeverandHintonGrammarasaforeignlanguageIn",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "AdvancesinNeuralInformationProcessingSystems2015",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[38]YonghuiWuMikeSchusterZhifengChenQuocVLeMohammadNorouziWolfgang",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "MachereyMaximKrikunYuanCaoQinGaoKlausMachereyetalGooglesneuralmachine",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "translationsystem:BridgingthegapbetweenhumanandmachinetranslationarXivpreprint",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "arXiv:1609081442016",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[39]JieZhouYingCaoXuguangWangPengLiandWeiXuDeeprecurrentmodelswith",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "fastforwardconnectionsforneuralmachinetranslationCoRRabs/1606041992016",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "[40]MuhuaZhuYueZhangWenliangChenMinZhangandJingboZhuFastandaccurate",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "shiftreduceconstituentparsingInProceedingsofthe51stAnnualMeetingoftheACL(Volume",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "1:LongPapers)pages434\u2013443 ACLAugust2013",
+      "page": 12,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Figure3:Anexampleoftheattentionmechanismfollowinglongdistancedependenciesinthe",
+      "page": 13,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "encoderselfattentioninlayer5of6 Manyoftheattentionheadsattendtoadistantdependencyof",
+      "page": 13,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "theverb\u2018makingcompletingthephrase\u2018makingmoredifficultAttentionshereshownonlyfor",
+      "page": 13,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "theword\u2018makingDifferentcolorsrepresentdifferentheadsBestviewedincolor",
+      "page": 13,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Figure4:Twoattentionheadsalsoinlayer5of6apparentlyinvolvedinanaphoraresolutionTop:",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Fullattentionsforhead5 Bottom:Isolatedattentionsfromjusttheword\u2018itsforattentionheads5",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "and6 Notethattheattentionsareverysharpforthisword",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lnbpbabao",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "aeeeuphepp",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "hbobno",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eendeeegnn",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "aeuuh",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "neh",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eon",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eua",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "bha",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lnbpbabao",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "aeeeupepp",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "uhn",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "hbobnod",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eendeeegnn",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lon",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "ebuuh",
+      "page": 14,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "Figure5:Manyoftheattentionheadsexhibitbehaviourthatseemsrelatedtothestructureofthe",
+      "page": 15,
+      "section_type": "related work"
+    },
+    {
+      "level": "H1",
+      "text": "sentenceWegivetwosuchexamplesabovefromtwodifferentheadsfromtheencoderselfattention",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H1",
+      "text": "atlayer5of6 Theheadsclearlylearnedtoperformdifferenttasks",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "haeeeupepp",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "epa",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lnbpbabao",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "uhn",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "hbobnod",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eendeeegnn",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lon",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "aeuuh",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "neh",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eua",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "bha",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "epa",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "Lnbpbabao",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "aeeeuphep",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "hbobno",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eendeeegnn",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "neh",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eon",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "eua",
+      "page": 15,
+      "section_type": "other"
+    },
+    {
+      "level": "H3",
+      "text": "ebuuh",
+      "page": 15,
+      "section_type": "other"
+    }
+  ]
+}
